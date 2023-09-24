@@ -1,0 +1,404 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C27240982ABED8130041A5D7 /* FocuStudyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27240972ABED8130041A5D7 /* FocuStudyApp.swift */; };
+		C272409A2ABED8130041A5D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27240992ABED8130041A5D7 /* ContentView.swift */; };
+		C272409C2ABED8150041A5D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C272409B2ABED8150041A5D7 /* Assets.xcassets */; };
+		C272409F2ABED8150041A5D7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C272409E2ABED8150041A5D7 /* Preview Assets.xcassets */; };
+		C27240A62ABEDA230041A5D7 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27240A52ABEDA230041A5D7 /* StartView.swift */; };
+		C27240A82ABEDA6A0041A5D7 /* FontManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27240A72ABEDA6A0041A5D7 /* FontManger.swift */; };
+		C27240B22ABEDAB90041A5D7 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = C27240A92ABEDAB90041A5D7 /* Pretendard-Black.otf */; };
+		C27240B32ABEDAB90041A5D7 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = C27240AA2ABEDAB90041A5D7 /* Pretendard-Thin.otf */; };
+		C27240B42ABEDAB90041A5D7 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C27240AB2ABEDAB90041A5D7 /* Pretendard-Regular.otf */; };
+		C27240B52ABEDAB90041A5D7 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C27240AC2ABEDAB90041A5D7 /* Pretendard-Bold.otf */; };
+		C27240B62ABEDAB90041A5D7 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = C27240AD2ABEDAB90041A5D7 /* Pretendard-ExtraLight.otf */; };
+		C27240B72ABEDAB90041A5D7 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = C27240AE2ABEDAB90041A5D7 /* Pretendard-Light.otf */; };
+		C27240B82ABEDAB90041A5D7 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C27240AF2ABEDAB90041A5D7 /* Pretendard-ExtraBold.otf */; };
+		C27240B92ABEDAB90041A5D7 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C27240B02ABEDAB90041A5D7 /* Pretendard-Medium.otf */; };
+		C27240BA2ABEDAB90041A5D7 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C27240B12ABEDAB90041A5D7 /* Pretendard-SemiBold.otf */; };
+		C27240BD2ABEDE750041A5D7 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27240BC2ABEDE750041A5D7 /* ColorManager.swift */; };
+		C27240BF2ABEE0270041A5D7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C27240BE2ABEE0270041A5D7 /* Launch Screen.storyboard */; };
+		C27240C12ABEE1300041A5D7 /* NickNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27240C02ABEE1300041A5D7 /* NickNameView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C27240942ABED8130041A5D7 /* FocuStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocuStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C27240972ABED8130041A5D7 /* FocuStudyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocuStudyApp.swift; sourceTree = "<group>"; };
+		C27240992ABED8130041A5D7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C272409B2ABED8150041A5D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C272409E2ABED8150041A5D7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C27240A52ABEDA230041A5D7 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		C27240A72ABEDA6A0041A5D7 /* FontManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManger.swift; sourceTree = "<group>"; };
+		C27240A92ABEDAB90041A5D7 /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
+		C27240AA2ABEDAB90041A5D7 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
+		C27240AB2ABEDAB90041A5D7 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		C27240AC2ABEDAB90041A5D7 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		C27240AD2ABEDAB90041A5D7 /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
+		C27240AE2ABEDAB90041A5D7 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
+		C27240AF2ABEDAB90041A5D7 /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
+		C27240B02ABEDAB90041A5D7 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		C27240B12ABEDAB90041A5D7 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		C27240BB2ABEDCE20041A5D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C27240BC2ABEDE750041A5D7 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
+		C27240BE2ABEE0270041A5D7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		C27240C02ABEE1300041A5D7 /* NickNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C27240912ABED8130041A5D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C272408B2ABED8130041A5D7 = {
+			isa = PBXGroup;
+			children = (
+				C27240962ABED8130041A5D7 /* FocuStudy */,
+				C27240952ABED8130041A5D7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C27240952ABED8130041A5D7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C27240942ABED8130041A5D7 /* FocuStudy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C27240962ABED8130041A5D7 /* FocuStudy */ = {
+			isa = PBXGroup;
+			children = (
+				C27240BB2ABEDCE20041A5D7 /* Info.plist */,
+				C27240972ABED8130041A5D7 /* FocuStudyApp.swift */,
+				C27240BE2ABEE0270041A5D7 /* Launch Screen.storyboard */,
+				C27240992ABED8130041A5D7 /* ContentView.swift */,
+				C27240C02ABEE1300041A5D7 /* NickNameView.swift */,
+				C27240A52ABEDA230041A5D7 /* StartView.swift */,
+				C27240BC2ABEDE750041A5D7 /* ColorManager.swift */,
+				C27240A72ABEDA6A0041A5D7 /* FontManger.swift */,
+				C272409B2ABED8150041A5D7 /* Assets.xcassets */,
+				C272409D2ABED8150041A5D7 /* Preview Content */,
+			);
+			path = FocuStudy;
+			sourceTree = "<group>";
+		};
+		C272409D2ABED8150041A5D7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C272409E2ABED8150041A5D7 /* Preview Assets.xcassets */,
+				C27240A92ABEDAB90041A5D7 /* Pretendard-Black.otf */,
+				C27240AC2ABEDAB90041A5D7 /* Pretendard-Bold.otf */,
+				C27240AF2ABEDAB90041A5D7 /* Pretendard-ExtraBold.otf */,
+				C27240AD2ABEDAB90041A5D7 /* Pretendard-ExtraLight.otf */,
+				C27240AE2ABEDAB90041A5D7 /* Pretendard-Light.otf */,
+				C27240B02ABEDAB90041A5D7 /* Pretendard-Medium.otf */,
+				C27240AB2ABEDAB90041A5D7 /* Pretendard-Regular.otf */,
+				C27240B12ABEDAB90041A5D7 /* Pretendard-SemiBold.otf */,
+				C27240AA2ABEDAB90041A5D7 /* Pretendard-Thin.otf */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C27240932ABED8130041A5D7 /* FocuStudy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C27240A22ABED8150041A5D7 /* Build configuration list for PBXNativeTarget "FocuStudy" */;
+			buildPhases = (
+				C27240902ABED8130041A5D7 /* Sources */,
+				C27240912ABED8130041A5D7 /* Frameworks */,
+				C27240922ABED8130041A5D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FocuStudy;
+			productName = FocuStudy;
+			productReference = C27240942ABED8130041A5D7 /* FocuStudy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C272408C2ABED8130041A5D7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					C27240932ABED8130041A5D7 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = C272408F2ABED8130041A5D7 /* Build configuration list for PBXProject "FocuStudy" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C272408B2ABED8130041A5D7;
+			productRefGroup = C27240952ABED8130041A5D7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C27240932ABED8130041A5D7 /* FocuStudy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C27240922ABED8130041A5D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C27240BA2ABEDAB90041A5D7 /* Pretendard-SemiBold.otf in Resources */,
+				C27240B62ABEDAB90041A5D7 /* Pretendard-ExtraLight.otf in Resources */,
+				C27240B92ABEDAB90041A5D7 /* Pretendard-Medium.otf in Resources */,
+				C27240B72ABEDAB90041A5D7 /* Pretendard-Light.otf in Resources */,
+				C27240B82ABEDAB90041A5D7 /* Pretendard-ExtraBold.otf in Resources */,
+				C272409F2ABED8150041A5D7 /* Preview Assets.xcassets in Resources */,
+				C27240BF2ABEE0270041A5D7 /* Launch Screen.storyboard in Resources */,
+				C27240B52ABEDAB90041A5D7 /* Pretendard-Bold.otf in Resources */,
+				C27240B22ABEDAB90041A5D7 /* Pretendard-Black.otf in Resources */,
+				C27240B42ABEDAB90041A5D7 /* Pretendard-Regular.otf in Resources */,
+				C272409C2ABED8150041A5D7 /* Assets.xcassets in Resources */,
+				C27240B32ABEDAB90041A5D7 /* Pretendard-Thin.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C27240902ABED8130041A5D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C27240C12ABEE1300041A5D7 /* NickNameView.swift in Sources */,
+				C27240A82ABEDA6A0041A5D7 /* FontManger.swift in Sources */,
+				C27240BD2ABEDE750041A5D7 /* ColorManager.swift in Sources */,
+				C27240A62ABEDA230041A5D7 /* StartView.swift in Sources */,
+				C272409A2ABED8130041A5D7 /* ContentView.swift in Sources */,
+				C27240982ABED8130041A5D7 /* FocuStudyApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C27240A02ABED8150041A5D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C27240A12ABED8150041A5D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C27240A32ABED8150041A5D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FocuStudy/Preview Content\"";
+				DEVELOPMENT_TEAM = 2HYF58Y9CP;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FocuStudy/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = choeyugyeong.FocuStudy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C27240A42ABED8150041A5D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FocuStudy/Preview Content\"";
+				DEVELOPMENT_TEAM = 2HYF58Y9CP;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FocuStudy/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = choeyugyeong.FocuStudy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C272408F2ABED8130041A5D7 /* Build configuration list for PBXProject "FocuStudy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C27240A02ABED8150041A5D7 /* Debug */,
+				C27240A12ABED8150041A5D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C27240A22ABED8150041A5D7 /* Build configuration list for PBXNativeTarget "FocuStudy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C27240A32ABED8150041A5D7 /* Debug */,
+				C27240A42ABED8150041A5D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C272408C2ABED8130041A5D7 /* Project object */;
+}
