@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C228F6032AC346AE00B0A915 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C228F6022AC346AE00B0A915 /* SearchBar.swift */; };
 		C27240982ABED8130041A5D7 /* FocuStudyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27240972ABED8130041A5D7 /* FocuStudyApp.swift */; };
 		C272409A2ABED8130041A5D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27240992ABED8130041A5D7 /* ContentView.swift */; };
 		C272409C2ABED8150041A5D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C272409B2ABED8150041A5D7 /* Assets.xcassets */; };
@@ -26,11 +27,12 @@
 		C27240BF2ABEE0270041A5D7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C27240BE2ABEE0270041A5D7 /* Launch Screen.storyboard */; };
 		C27240C12ABEE1300041A5D7 /* NickNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27240C02ABEE1300041A5D7 /* NickNameView.swift */; };
 		C27240C32AC09A7E0041A5D7 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27240C22AC09A7E0041A5D7 /* MainView.swift */; };
-		C27240C52AC09B590041A5D7 /* StudyRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27240C42AC09B590041A5D7 /* StudyRoomView.swift */; };
+		C27240C52AC09B590041A5D7 /* StudyGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27240C42AC09B590041A5D7 /* StudyGroupView.swift */; };
 		C27240C72AC09B6B0041A5D7 /* TodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27240C62AC09B6B0041A5D7 /* TodoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C228F6022AC346AE00B0A915 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		C27240942ABED8130041A5D7 /* FocuStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocuStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C27240972ABED8130041A5D7 /* FocuStudyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocuStudyApp.swift; sourceTree = "<group>"; };
 		C27240992ABED8130041A5D7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,7 +54,7 @@
 		C27240BE2ABEE0270041A5D7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		C27240C02ABEE1300041A5D7 /* NickNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameView.swift; sourceTree = "<group>"; };
 		C27240C22AC09A7E0041A5D7 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		C27240C42AC09B590041A5D7 /* StudyRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRoomView.swift; sourceTree = "<group>"; };
+		C27240C42AC09B590041A5D7 /* StudyGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyGroupView.swift; sourceTree = "<group>"; };
 		C27240C62AC09B6B0041A5D7 /* TodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,7 +90,7 @@
 			children = (
 				C27240BB2ABEDCE20041A5D7 /* Info.plist */,
 				C27240972ABED8130041A5D7 /* FocuStudyApp.swift */,
-				C27240C42AC09B590041A5D7 /* StudyRoomView.swift */,
+				C27240C42AC09B590041A5D7 /* StudyGroupView.swift */,
 				C27240C62AC09B6B0041A5D7 /* TodoView.swift */,
 				C27240BE2ABEE0270041A5D7 /* Launch Screen.storyboard */,
 				C27240992ABED8130041A5D7 /* ContentView.swift */,
@@ -97,6 +99,7 @@
 				C27240A52ABEDA230041A5D7 /* StartView.swift */,
 				C27240BC2ABEDE750041A5D7 /* ColorManager.swift */,
 				C27240A72ABEDA6A0041A5D7 /* FontManger.swift */,
+				C228F6022AC346AE00B0A915 /* SearchBar.swift */,
 				C272409B2ABED8150041A5D7 /* Assets.xcassets */,
 				C272409D2ABED8150041A5D7 /* Preview Content */,
 			);
@@ -207,8 +210,9 @@
 				C27240A62ABEDA230041A5D7 /* StartView.swift in Sources */,
 				C272409A2ABED8130041A5D7 /* ContentView.swift in Sources */,
 				C27240C72AC09B6B0041A5D7 /* TodoView.swift in Sources */,
+				C228F6032AC346AE00B0A915 /* SearchBar.swift in Sources */,
 				C27240982ABED8130041A5D7 /* FocuStudyApp.swift in Sources */,
-				C27240C52AC09B590041A5D7 /* StudyRoomView.swift in Sources */,
+				C27240C52AC09B590041A5D7 /* StudyGroupView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

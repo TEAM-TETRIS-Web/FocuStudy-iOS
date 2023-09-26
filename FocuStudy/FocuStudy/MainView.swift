@@ -12,15 +12,15 @@ struct MainView: View {
 
     var body: some View {
         TabView(selection: $selection) {
-            Text("Study Room")
+            StudyGroupView()
                //.badge(10)
                .tabItem {
                  Image(systemName: "studentdesk")
-                 Text("Study Room")
+                 Text("Study Group")
                }
                .tag(1)
             
-             Text("To do")
+             TodoView()
                .tabItem {
                  Image(systemName: "square.and.pencil")
                  Text("To do")
