@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C228F6032AC346AE00B0A915 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C228F6022AC346AE00B0A915 /* SearchBar.swift */; };
+		C265BA5D2ACC251C004242CA /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C265BA5C2ACC251C004242CA /* MyPageView.swift */; };
+		C265BA5F2ACC2C23004242CA /* CommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C265BA5E2ACC2C23004242CA /* CommunityView.swift */; };
 		C27240982ABED8130041A5D7 /* FocuStudyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27240972ABED8130041A5D7 /* FocuStudyApp.swift */; };
 		C272409A2ABED8130041A5D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27240992ABED8130041A5D7 /* ContentView.swift */; };
 		C272409C2ABED8150041A5D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C272409B2ABED8150041A5D7 /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 
 /* Begin PBXFileReference section */
 		C228F6022AC346AE00B0A915 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		C265BA5C2ACC251C004242CA /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		C265BA5E2ACC2C23004242CA /* CommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityView.swift; sourceTree = "<group>"; };
 		C27240942ABED8130041A5D7 /* FocuStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocuStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C27240972ABED8130041A5D7 /* FocuStudyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocuStudyApp.swift; sourceTree = "<group>"; };
 		C27240992ABED8130041A5D7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,8 +100,10 @@
 				C27240992ABED8130041A5D7 /* ContentView.swift */,
 				C27240C02ABEE1300041A5D7 /* NickNameView.swift */,
 				C27240C22AC09A7E0041A5D7 /* MainView.swift */,
+				C265BA5E2ACC2C23004242CA /* CommunityView.swift */,
 				C27240A52ABEDA230041A5D7 /* StartView.swift */,
 				C27240BC2ABEDE750041A5D7 /* ColorManager.swift */,
+				C265BA5C2ACC251C004242CA /* MyPageView.swift */,
 				C27240A72ABEDA6A0041A5D7 /* FontManger.swift */,
 				C228F6022AC346AE00B0A915 /* SearchBar.swift */,
 				C272409B2ABED8150041A5D7 /* Assets.xcassets */,
@@ -205,10 +211,12 @@
 			files = (
 				C27240C12ABEE1300041A5D7 /* NickNameView.swift in Sources */,
 				C27240C32AC09A7E0041A5D7 /* MainView.swift in Sources */,
+				C265BA5F2ACC2C23004242CA /* CommunityView.swift in Sources */,
 				C27240A82ABEDA6A0041A5D7 /* FontManger.swift in Sources */,
 				C27240BD2ABEDE750041A5D7 /* ColorManager.swift in Sources */,
 				C27240A62ABEDA230041A5D7 /* StartView.swift in Sources */,
 				C272409A2ABED8130041A5D7 /* ContentView.swift in Sources */,
+				C265BA5D2ACC251C004242CA /* MyPageView.swift in Sources */,
 				C27240C72AC09B6B0041A5D7 /* TodoView.swift in Sources */,
 				C228F6032AC346AE00B0A915 /* SearchBar.swift in Sources */,
 				C27240982ABED8130041A5D7 /* FocuStudyApp.swift in Sources */,

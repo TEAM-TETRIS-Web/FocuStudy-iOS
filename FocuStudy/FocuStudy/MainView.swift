@@ -34,7 +34,7 @@ struct MainView: View {
                }
                .tag(3)
             
-            Text("Community")
+            CommunityView()
               .tabItem {
                 Image(systemName: "text.bubble")
                 Text("Community")
@@ -42,7 +42,7 @@ struct MainView: View {
               .tag(4)
             
         
-            Text("My Page")
+            MyPageView()
               .tabItem {
                 Image(systemName: "person.circle.fill")
                 Text("My Page")
