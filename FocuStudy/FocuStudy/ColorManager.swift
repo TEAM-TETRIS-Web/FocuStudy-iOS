@@ -8,10 +8,6 @@
 import SwiftUI
 
 extension Color {
-    //Green
-    static let darkGreen = Color(hex: "427A5B")
-    static let lightGreen = Color(hex: "9BCD93")
-    //Gray
     static let gray80 = Color(hex: "666666")
     static let gray60 = Color(hex: "999999")
     static let gray40 = Color(hex: "CCCCCC")
@@ -20,8 +16,8 @@ extension Color {
     static let gray0 = Color(hex: "FDFDFD")
 
     static let symbolBlue = Color(hex: "0075FF")
+    static let lightBlue = Color(hex: "E8F2FF")
 
-    
     init(hex: String) {
         let scanner = Scanner(string: hex)
         _ = scanner.scanString("#")
