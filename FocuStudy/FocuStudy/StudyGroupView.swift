@@ -17,9 +17,11 @@ struct Group : Identifiable{
 
 struct StudyGroupView: View {
     var array : [Group] = [Group(groupName: "토익 990점 맞기", groupPersonnel: "1/10"),
-                           Group(groupName: "전공 A+ 받을사람", groupPersonnel: "8/43"),
-                           Group(groupName: "전공 A+ 받을사람", groupPersonnel: "8/43")
-                           
+                           Group(groupName: "전공 A+ 받을사람", groupPersonnel: "7/9"),
+                           Group(groupName: "백준 골드1 도전방", groupPersonnel: "3/5"),
+                           Group(groupName: "알고리즘 A+ 달성하자", groupPersonnel: "4/6"),
+                           Group(groupName: "전공 시험 스터디 구합니다", groupPersonnel: "2/3"),
+                           Group(groupName: "같이 코딩하실 분 구해요", groupPersonnel: "2/5")
     ]
     @State private var newItem = ""
     
@@ -44,10 +46,10 @@ struct StudyGroupView: View {
                         }
                         
                     }
-                    .background(Color.white)
+                    .background(Color.lightBlue)
                     
                     .cornerRadius(20)
-                    .shadow(color: Color.blue.opacity(0.3), radius: 10, x: 0, y: 4)
+                    .shadow(color: Color.gray20.opacity(0.3), radius: 6, x: 0, y: 3)
                     .padding(EdgeInsets(top: 10, leading: 20, bottom:0, trailing: 20))
                 }
                 .padding(.top,10)
