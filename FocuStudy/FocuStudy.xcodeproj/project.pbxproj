@@ -30,7 +30,7 @@
 		C27240C12ABEE1300041A5D7 /* NickNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27240C02ABEE1300041A5D7 /* NickNameView.swift */; };
 		C27240C32AC09A7E0041A5D7 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27240C22AC09A7E0041A5D7 /* MainView.swift */; };
 		C27240C52AC09B590041A5D7 /* StudyGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27240C42AC09B590041A5D7 /* StudyGroupView.swift */; };
-		C27240C72AC09B6B0041A5D7 /* TodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27240C62AC09B6B0041A5D7 /* TodoView.swift */; };
+		C27240C72AC09B6B0041A5D7 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27240C62AC09B6B0041A5D7 /* TodoListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +59,7 @@
 		C27240C02ABEE1300041A5D7 /* NickNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameView.swift; sourceTree = "<group>"; };
 		C27240C22AC09A7E0041A5D7 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C27240C42AC09B590041A5D7 /* StudyGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyGroupView.swift; sourceTree = "<group>"; };
-		C27240C62AC09B6B0041A5D7 /* TodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoView.swift; sourceTree = "<group>"; };
+		C27240C62AC09B6B0041A5D7 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +95,7 @@
 				C27240BB2ABEDCE20041A5D7 /* Info.plist */,
 				C27240972ABED8130041A5D7 /* FocuStudyApp.swift */,
 				C27240C42AC09B590041A5D7 /* StudyGroupView.swift */,
-				C27240C62AC09B6B0041A5D7 /* TodoView.swift */,
+				C27240C62AC09B6B0041A5D7 /* TodoListView.swift */,
 				C27240BE2ABEE0270041A5D7 /* Launch Screen.storyboard */,
 				C27240992ABED8130041A5D7 /* ContentView.swift */,
 				C27240C02ABEE1300041A5D7 /* NickNameView.swift */,
@@ -217,7 +217,7 @@
 				C27240A62ABEDA230041A5D7 /* StartView.swift in Sources */,
 				C272409A2ABED8130041A5D7 /* ContentView.swift in Sources */,
 				C265BA5D2ACC251C004242CA /* MyPageView.swift in Sources */,
-				C27240C72AC09B6B0041A5D7 /* TodoView.swift in Sources */,
+				C27240C72AC09B6B0041A5D7 /* TodoListView.swift in Sources */,
 				C228F6032AC346AE00B0A915 /* SearchBar.swift in Sources */,
 				C27240982ABED8130041A5D7 /* FocuStudyApp.swift in Sources */,
 				C27240C52AC09B590041A5D7 /* StudyGroupView.swift in Sources */,

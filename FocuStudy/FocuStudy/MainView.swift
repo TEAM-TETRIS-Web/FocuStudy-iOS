@@ -20,7 +20,7 @@ struct MainView: View {
                }
                .tag(1)
             
-             TodoView()
+             TodoListView()
                .tabItem {
                  Image(systemName: "square.and.pencil")
                  Text("To do")
