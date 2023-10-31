@@ -6,65 +6,175 @@
 //
 
 import SwiftUI
+struct Item: Identifiable {
+    var id: Int
+    var title: String
+    var color: Color
+}
 
+class Store: ObservableObject {
+    @Published var items: [Item]
+    
+    let colors: [Color] = [.red, .orange, .blue, .teal, .mint, .green, .gray, .indigo, .black]
+    
+    // dummy data
+    init() {
+        items = []
+        for i in 0...7 {
+            let new = Item(id: i, title: "Item \(i)", color: colors[i])
+            items.append(new)
+        }
+    }
+}
 
 struct Group : Identifiable{
     var id = UUID()
     var groupName : String
+    var groupDetail : String
     var groupPersonnel : String
-    
+    var groupImage : String
+    var currentStudy : String
+    var groupcolor : Color
 }
 
 struct StudyGroupView: View {
-    var array : [Group] = [Group(groupName: "토익 990점 맞기", groupPersonnel: "1/10"),
-                           Group(groupName: "전공 A+ 받을사람", groupPersonnel: "7/9"),
-                           Group(groupName: "백준 골드1 도전방", groupPersonnel: "3/5"),
-                           Group(groupName: "알고리즘 A+ 달성하자", groupPersonnel: "4/6"),
-                           Group(groupName: "전공 시험 스터디 구합니다", groupPersonnel: "2/3"),
-                           Group(groupName: "같이 코딩하실 분 구해요", groupPersonnel: "2/5")
+    var recent : [Group] = [
+        Group(groupName: "토익 990점 맞기",groupDetail: "토익 990점을 맞기위해 어쩌고 저쩌고 ㅇ너라나어리ㅏㅓ마니ㅓㅇ라ㅓㅁ나ㅣ어라ㅣㅓㅁ나어라ㅣㅓㄴ아ㅣㅓ린어" , groupPersonnel: "15/60",groupImage: "profile", currentStudy: "11", groupcolor: Color(red: 0.64, green: 0.46, blue: 0.93).opacity(0.87)),
+        Group(groupName: "토익 990점 맞기",groupDetail: "토익 990점을 맞기위해 어쩌고 저쩌고 ㅇ너라나어리ㅏㅓ마니ㅓㅇ라ㅓㅁ나ㅣ어라ㅣㅓㅁ나어라ㅣㅓㄴ아ㅣㅓ린어" , groupPersonnel: "15/60",groupImage: "profile", currentStudy: "11", groupcolor: Color(red: 0.45, green: 0.66, blue: 0.43).opacity(0.87))
     ]
     @State private var newItem = ""
     
     
     var body: some View {
-        NavigationView{
-            ScrollView{
-                VStack(alignment: .leading) {
-                    ForEach(array) { group in
-                        HStack{
-                            VStack(alignment: .leading) {
+        VStack{
+            NavigationView{
+                VStack{
+                    popularGroupView()
+                    
+                    Text("Recent")
+                        .font(.bold24)
+    
+                    ScrollView{
+                        VStack(alignment: .leading) {
+                            ForEach(recent) { group in
+                                HStack{
+                                    VStack(alignment: .leading) {
+                                        
+                                        Text(group.groupName)
+                                            .font(.semiBold)
+                                        
+                                        Text(group.groupPersonnel)
+                                            .font(.medium16)
+                                    }
+                                    
+                                    .padding(EdgeInsets(top: 10, leading: 20, bottom:10, trailing: 20))
+                                    Spacer()
+                                }
                                 
-                                Text(group.groupName)
-                                    .font(.semiBold)
-                                
-                                Text(group.groupPersonnel)
-                                    .font(.medium16)
                             }
+                            .background(Color.lightBlue)
                             
-                            .padding(EdgeInsets(top: 10, leading: 20, bottom:10, trailing: 20))
-                            Spacer()
+                            .cornerRadius(20)
+                            .shadow(color: Color.gray20.opacity(0.3), radius: 6, x: 0, y: 3)
+                            .padding(EdgeInsets(top: 10, leading: 20, bottom:0, trailing: 20))
+                        }
+                        .padding(.top,10)
+                    }
+                    
+                    .navigationTitle("Study Group")
+                    .navigationBarItems(
+                        trailing:
+                            NavigationLink(
+                                destination: MakingGroupView(),
+                                label: {
+                                    Image(systemName: "plus")
+                                    
+                                })
+                    )        }
+            }
+        }
+    }
+}
+
+
+
+struct popularGroupView: View {
+    var popular : [Group] = [
+        Group(groupName: "토익 990점 맞기",groupDetail: "토익 990점을 맞기위해 어쩌고 저쩌고 ㅇ너라나어리ㅏㅓ마니ㅓㅇ라ㅓㅁ나ㅣ어라ㅣㅓㅁ나어라ㅣㅓㄴ아ㅣㅓ린어" , groupPersonnel: "15/60",groupImage: "profile", currentStudy: "11", groupcolor: Color(red: 0.64, green: 0.46, blue: 0.93).opacity(0.87)),
+        Group(groupName: "토익 990점 맞기",groupDetail: "토익 990점을 맞기위해 어쩌고 저쩌고 ㅇ너라나어리ㅏㅓ마니ㅓㅇ라ㅓㅁ나ㅣ어라ㅣㅓㅁ나어라ㅣㅓㄴ아ㅣㅓ린어" , groupPersonnel: "15/60",groupImage: "profile", currentStudy: "11", groupcolor: Color(red: 0.45, green: 0.66, blue: 0.43).opacity(0.87))
+    ]
+    
+    var body: some View {
+        
+        VStack{
+            HStack{
+                ScrollView(.horizontal){
+                    HStack{
+                        ForEach(popular) { group in
+                            HStack{
+                                VStack{
+                                    HStack{
+                                        Text(group.groupName)
+                                            .font(.semiBold)
+                                        Spacer()
+                                        Image(group.groupImage)
+                                            .resizable()
+                                            .frame(width: 50,height: 50)
+                                            .clipped()
+                                    }
+                                    HStack{
+                                        Text(group.groupDetail)
+                                            .frame(width: 190)
+                                        Spacer()
+                                    }
+                                    .padding(.bottom,5)
+                                    
+                                    HStack{
+                                        VStack(spacing:0){
+                                            HStack(spacing:0){
+                                                Text(group.currentStudy)
+                                                Text("명 공부중")
+                                                Spacer()
+                                            }
+                                            HStack{
+                                                Text(group.groupPersonnel)
+                                                    .font(.medium16)
+                                                Spacer()
+                                                
+                                                Button(action: {}) {
+                                                    HStack {
+                                                        Text("참여하기")
+                                                            .padding(.all,6)
+                                                            .background(Color.white)
+                                                            .foregroundColor(.indigo)
+                                                            .cornerRadius(10)
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                Spacer()
+                            }
+                            .padding(.all,20)
+                            .background(AngularGradient(gradient: Gradient(colors: [Color.gray20, group.groupcolor]),
+                                                        center: .topLeading,
+                                                        angle: .degrees(180 + 45))
+                            )
+                            .cornerRadius(20)
+                            
+                            
+                            
                         }
                         
+                        .cornerRadius(20)
+                        .shadow(color: Color.gray20.opacity(0.3), radius: 6, x: 0, y: 3)
+                        .padding(EdgeInsets(top: 10, leading: 20, bottom:0, trailing: 20))
                     }
-                    .background(Color.lightBlue)
-                    
-                    .cornerRadius(20)
-                    .shadow(color: Color.gray20.opacity(0.3), radius: 6, x: 0, y: 3)
-                    .padding(EdgeInsets(top: 10, leading: 20, bottom:0, trailing: 20))
                 }
-                .padding(.top,10)
             }
-            
-            .navigationTitle("Study Group")
-            .navigationBarItems(
-                trailing:
-                    NavigationLink(
-                        destination: MakingGroupView(),
-                        label: {
-                            Image(systemName: "plus")
-                            
-                        })
-            )        }
+        }
     }
 }
 
@@ -96,7 +206,7 @@ struct MakingGroupView: View {
                 .padding()
                 .background(Color(uiColor: .secondarySystemBackground))
             Spacer()
-
+            
             HStack{
                 Text("사람 수")
                     .font(.bold16)
@@ -107,9 +217,9 @@ struct MakingGroupView: View {
                 TextField("사람 수", text: $personNumber)
                     .keyboardType(.decimalPad)  //키패드 종류(숫자)
             }
-                        
+            
             Spacer()
-
+            
             
             HStack{
                 Text("공개 여부")
@@ -159,11 +269,11 @@ struct MakingGroupView: View {
             .cornerRadius(12)
             
             Spacer()
-
+            
         }
         .padding(.horizontal,20)
         
-
+        
     }
 }
 
