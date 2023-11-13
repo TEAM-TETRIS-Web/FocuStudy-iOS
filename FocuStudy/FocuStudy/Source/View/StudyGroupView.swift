@@ -39,7 +39,10 @@ struct Group : Identifiable{
 
 struct StudyGroupView: View {
     var recent : [Group] = [
-        Group(groupName: "토익 990점 맞기",groupDetail: "토익 990점을 맞기위해 어쩌고 저쩌고 ㅇ너라나어리ㅏㅓ마니ㅓㅇ라ㅓㅁ나ㅣ어라ㅣㅓㅁ나어라ㅣㅓㄴ아ㅣㅓ린어" , groupPersonnel: "15/60",groupImage: "profile", currentStudy: "11", groupcolor: Color(red: 0.64, green: 0.46, blue: 0.93).opacity(0.87)),
+        Group(groupName: "토익 990점 맞기",groupDetail: "토익 990점을 맞기위해 어쩌고 저쩌고 ㅇ너라나어리ㅏㅓ마니ㅓㅇ라ㅓㅁ나ㅣ어라ㅣㅓㅁ나어라ㅣㅓㄴ아ㅣㅓ린어" , groupPersonnel: "15/60",groupImage: "books", currentStudy: "11", groupcolor: Color(red: 0.64, green: 0.46, blue: 0.93).opacity(0.87)),
+        
+        
+        
         Group(groupName: "토익 990점 맞기",groupDetail: "토익 990점을 맞기위해 어쩌고 저쩌고 ㅇ너라나어리ㅏㅓ마니ㅓㅇ라ㅓㅁ나ㅣ어라ㅣㅓㅁ나어라ㅣㅓㄴ아ㅣㅓ린어" , groupPersonnel: "15/60",groupImage: "profile", currentStudy: "11", groupcolor: Color(red: 0.45, green: 0.66, blue: 0.43).opacity(0.87))
     ]
     @State private var newItem = ""
@@ -53,11 +56,19 @@ struct StudyGroupView: View {
                     
                     Text("Recent")
                         .font(.bold24)
+                        .padding(.top,5)
     
                     ScrollView{
                         VStack(alignment: .leading) {
                             ForEach(recent) { group in
                                 HStack{
+                                    Spacer()
+
+                                    Image(group.groupImage)
+                                        .resizable()
+                                        .frame(width: 30, height: 30)
+                                    
+                                    Spacer()
                                     VStack(alignment: .leading) {
                                         
                                         Text(group.groupName)
@@ -66,13 +77,29 @@ struct StudyGroupView: View {
                                         Text(group.groupPersonnel)
                                             .font(.medium16)
                                     }
+                                    .padding(.vertical,10)
+                                    .padding(.horizontal,10)
                                     
-                                    .padding(EdgeInsets(top: 10, leading: 20, bottom:10, trailing: 20))
                                     Spacer()
+                                    Spacer()
+
+                                    Button(action: {}) {
+                                        HStack {
+                                            Text("참여하기")
+                                                .padding(.all,6)
+                                                .background(Color.gray10)
+                                                .foregroundColor(Color.gray80)
+                                                .cornerRadius(10)
+                                        }
+                                    }
+                                    
+                                    .padding(.horizontal,20)
+                                    .padding(.vertical,10)
+
                                 }
                                 
                             }
-                            .background(Color.lightBlue)
+                            .background(Color.white)
                             
                             .cornerRadius(20)
                             .shadow(color: Color.gray20.opacity(0.3), radius: 6, x: 0, y: 3)
@@ -90,9 +117,10 @@ struct StudyGroupView: View {
                                     Image(systemName: "plus")
                                     
                                 })
-                    )        }
+                    )        }.background(Color.systemGray)
             }
         }
+
     }
 }
 

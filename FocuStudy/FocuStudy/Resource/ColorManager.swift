@@ -14,9 +14,15 @@ extension Color {
     static let gray20 = Color(hex: "DEDEDE")
     static let gray10 = Color(hex: "#F3F3F3")
     static let gray0 = Color(hex: "FDFDFD")
+    static let systemGray = Color(hex: "F2F2F7")
 
     static let symbolBlue = Color(hex: "0075FF")
     static let lightBlue = Color(hex: "E8F2FF")
+
+    static let blue10 = Color(hex: "E8F2FF")
+    static let blue20 = Color(hex: "AACEFB")
+    static let blue40 = Color(hex: "66ACF8")
+    static let blue60 = Color(hex: "377EF2")
 
     init(hex: String) {
         let scanner = Scanner(string: hex)

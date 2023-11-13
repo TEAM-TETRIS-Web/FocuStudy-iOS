@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Lottie
 
 struct HomeView: View {
     @State private var myGroup = 0
@@ -14,65 +15,86 @@ struct HomeView: View {
     var body: some View {
         NavigationView{
             VStack{
-                Text("11월 02일 (목)")
-                    .font(.bold16)
-                    .foregroundColor(.symbolBlue)
-                VStack(spacing:3){
-                    Text("Focus TIME")
-                        .font(.semiBold)
-                        .foregroundColor(.symbolBlue)
-                    
-                    Text("02:10:35")
-                        .font(.extraBold)
-                        .foregroundColor(.symbolBlue)
-                }
-                .padding(.vertical,50)
-                .padding(.horizontal,70)
-                .background(Color.lightBlue)
-                .cornerRadius(18)
+                HStack{
+                    Spacer()
+                    VStack(spacing:3){
+                        
+            
+
+                        Text("11월 02일 (목)")
+                            .font(.bold16)
+                            .foregroundColor(.black)
+                        
+                        
+                        Text("Focus TIME")
+                            .font(.semiBold)
+                            .foregroundColor(.black)
+                        
+                        Text("02:10:35")
+                            .font(.extraBold)
+                            .foregroundColor(.black)
+                    }
+                    .padding(.vertical,60)
+                    .padding(.horizontal,80)
+                    .cornerRadius(18)
+                    Spacer()
+                }.padding(.horizontal,10)
+                .background(Color.white)
+                .cornerRadius(8)
+                .padding(.horizontal,15)
                 
                 Spacer()
                 
-                Section{
+                HStack{
+                    Spacer()
                     Picker("My Group", selection: $myGroup) {
                         ForEach(myGroups, id:\.self) {
                             Text("\($0)")
                         }
+                        
+                        .padding(.horizontal,30)
+                        .padding(.vertical,20)
+                        .background(Color.white)
+                        
+                        .pickerStyle(.navigationLink)
                     }
-                    .padding(.horizontal,30)
-                    .padding(.vertical,20)
-                    .background(Color.gray10)
-                    
-                    .pickerStyle(.navigationLink)
-                    
                     Spacer()
-        
-                    NavigationLink(
-                        destination: studyView(),
-                        label: {
-                            HStack{
-                                Text("공부 시작하기")
-                                    .font(.bold16)
-                                    .foregroundColor(.white)
-                            }
-                            .padding(.horizontal,30)
-                            .padding(.vertical,15)
-                            .background(Color.symbolBlue)
-                            .cornerRadius(20)
-                        })
                 }
-                .navigationTitle("Home")
+                .background(Color.white)
+                .cornerRadius(8)
+                .padding(.horizontal,15)
+
                 Spacer()
+                
+                NavigationLink(
+                    destination: studyView(),
+                    label: {
+                        HStack{
+                            Spacer()
+                            Text("공부 시작하기")
+                                .font(.bold16)
+                                .foregroundColor(.black)
+                                .padding(.vertical,10)
+                            Spacer()
+                        }
+                        .background(Color.white)
+                        .cornerRadius(8)
+                        .padding(.horizontal,15)
+                    })
             }
+            .navigationTitle("Home")
+            .background(Color.systemGray)
             
         }
+        
     }
-    
-    
 }
+
+
+
 struct studyView: View {
     @Environment(\.presentationMode) var presentationMode
-
+    
     var body: some View {
         NavigationView{
             VStack{
@@ -139,7 +161,7 @@ struct studyView: View {
                 .background(Color.lightBlue)
                 .cornerRadius(18)
                 .padding(.bottom,30)
-            
+                
                 HStack{
                     Text("공부 그만하기")
                         .font(.bold16)
@@ -151,7 +173,7 @@ struct studyView: View {
                 .cornerRadius(20)
                 .onTapGesture {
                     presentationMode.wrappedValue.dismiss()
-
+                    
                 }
                 
                 Spacer()
@@ -159,4 +181,7 @@ struct studyView: View {
             .navigationTitle("토익 990점 맞기")
         }
     }
+}
+#Preview {
+    HomeView()
 }
