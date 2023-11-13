@@ -14,7 +14,8 @@ struct popularGroupView: View {
         
         Group(groupName: "Swift 마스터",groupDetail: "취업난에서 살아남기! 네카라쿠배 뿌시자!!" , groupPersonnel: "13/30",groupImage: "apple", currentStudy: "9", groupcolor: Color(red: 0.45, green: 0.66, blue: 0.43).opacity(0.87))
     ]
-    
+    @State var isButtonTapped = false
+
     var body: some View {
         
         VStack{
@@ -52,7 +53,10 @@ struct popularGroupView: View {
                                                     .font(.medium16)
                                                 Spacer()
                                                 
-                                                Button(action: {}) {
+                                                Button(action: {
+                                                    isButtonTapped = true
+
+                                                }) {
                                                     HStack {
                                                         Text("참여하기")
                                                             .padding(.all,6)
@@ -60,6 +64,10 @@ struct popularGroupView: View {
                                                             .foregroundColor(Color.gray80)
                                                             .cornerRadius(10)
                                                     }
+                                                }
+                                                .alert(isPresented: $isButtonTapped){
+                                                    Alert(title: Text("참여가 완료되었습니다"), message: nil,
+                                                            dismissButton: .default(Text("확인")))
                                                 }
                                             }
                                         }

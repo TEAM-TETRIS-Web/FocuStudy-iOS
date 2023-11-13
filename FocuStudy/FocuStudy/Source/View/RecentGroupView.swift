@@ -16,7 +16,7 @@ struct recentGroupView: View {
         Group(groupName: "React 스터디", groupDetail: "" , groupPersonnel: "12/30", groupImage: "react", currentStudy: "11", groupcolor: Color.blue10)
     ]
     @State private var newItem = ""
-    
+    @State var isButtonTapped = false
     
     var body: some View {
         VStack{
@@ -52,7 +52,9 @@ struct recentGroupView: View {
                                         .padding(.horizontal,10)
                                         Spacer()
 
-                                        Button(action: {}) {
+                                        Button(action: {
+                                            isButtonTapped = true
+                                        }) {
                                             HStack {
                                                 Text("참여하기")
                                                     .padding(.all,6)
@@ -63,6 +65,10 @@ struct recentGroupView: View {
                                         }
                                         .padding(.horizontal,20)
                                         .padding(.vertical,10)
+                                        .alert(isPresented: $isButtonTapped){
+                                            Alert(title: Text("참여가 완료되었습니다"), message: nil,
+                                                    dismissButton: .default(Text("확인")))
+                                        }
                                     }
                                     Spacer()
                                 }
