@@ -74,7 +74,7 @@ struct MainTabbedView: View {
                 .padding(6)
             }
             .frame(height: 60)
-            .background(Color.lightBlue/*.opacity(0.2)*/)
+            .background(Color.blue20.opacity(0.7))
             .cornerRadius(20)
             .padding(.horizontal, 26)
         }

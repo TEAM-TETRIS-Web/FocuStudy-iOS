@@ -17,7 +17,6 @@ class Store: ObservableObject {
     
     let colors: [Color] = [.red, .orange, .blue, .teal, .mint, .green, .gray, .indigo, .black]
     
-    // dummy data
     init() {
         items = []
         for i in 0...7 {
@@ -39,11 +38,10 @@ struct Group : Identifiable{
 
 struct StudyGroupView: View {
     var recent : [Group] = [
-        Group(groupName: "토익 990점 맞기",groupDetail: "토익 990점을 맞기위해 어쩌고 저쩌고 ㅇ너라나어리ㅏㅓ마니ㅓㅇ라ㅓㅁ나ㅣ어라ㅣㅓㅁ나어라ㅣㅓㄴ아ㅣㅓ린어" , groupPersonnel: "15/60",groupImage: "books", currentStudy: "11", groupcolor: Color(red: 0.64, green: 0.46, blue: 0.93).opacity(0.87)),
+        Group(groupName: "책벌레",groupDetail: "" , groupPersonnel: "3/10",groupImage: "books", currentStudy: "11", groupcolor: Color.blue10),
         
         
-        
-        Group(groupName: "토익 990점 맞기",groupDetail: "토익 990점을 맞기위해 어쩌고 저쩌고 ㅇ너라나어리ㅏㅓ마니ㅓㅇ라ㅓㅁ나ㅣ어라ㅣㅓㅁ나어라ㅣㅓㄴ아ㅣㅓ린어" , groupPersonnel: "15/60",groupImage: "profile", currentStudy: "11", groupcolor: Color(red: 0.45, green: 0.66, blue: 0.43).opacity(0.87))
+        Group(groupName: "React 스터디", groupDetail: "" , groupPersonnel: "12/30", groupImage: "react", currentStudy: "11", groupcolor: Color.blue10)
     ]
     @State private var newItem = ""
     
@@ -63,39 +61,38 @@ struct StudyGroupView: View {
                             ForEach(recent) { group in
                                 HStack{
                                     Spacer()
-
-                                    Image(group.groupImage)
-                                        .resizable()
-                                        .frame(width: 30, height: 30)
-                                    
-                                    Spacer()
-                                    VStack(alignment: .leading) {
-                                        
-                                        Text(group.groupName)
-                                            .font(.semiBold)
-                                        
-                                        Text(group.groupPersonnel)
-                                            .font(.medium16)
-                                    }
-                                    .padding(.vertical,10)
-                                    .padding(.horizontal,10)
-                                    
-                                    Spacer()
                                     Spacer()
 
-                                    Button(action: {}) {
-                                        HStack {
-                                            Text("참여하기")
-                                                .padding(.all,6)
-                                                .background(Color.gray10)
-                                                .foregroundColor(Color.gray80)
-                                                .cornerRadius(10)
+                                    HStack{
+                                        Image(group.groupImage)
+                                            .resizable()
+                                            .frame(width: 35, height: 35)
+                                                                                
+                                        VStack(alignment: .leading) {
+                                            
+                                            Text(group.groupName)
+                                                .font(.semiBold)
+                                            
+                                            Text(group.groupPersonnel)
+                                                .font(.medium16)
                                         }
-                                    }
-                                    
-                                    .padding(.horizontal,20)
-                                    .padding(.vertical,10)
+                                        .padding(.vertical,10)
+                                        .padding(.horizontal,10)
+                                        Spacer()
 
+                                        Button(action: {}) {
+                                            HStack {
+                                                Text("참여하기")
+                                                    .padding(.all,6)
+                                                    .background(Color.gray10)
+                                                    .foregroundColor(Color.gray80)
+                                                    .cornerRadius(10)
+                                            }
+                                        }
+                                        .padding(.horizontal,20)
+                                        .padding(.vertical,10)
+                                    }
+                                    Spacer()
                                 }
                                 
                             }
@@ -114,7 +111,8 @@ struct StudyGroupView: View {
                             NavigationLink(
                                 destination: MakingGroupView(),
                                 label: {
-                                    Image(systemName: "plus")
+                                    Image(systemName: "plus.square")
+                                        .foregroundColor(Color.gray80)
                                     
                                 })
                     )        }.background(Color.systemGray)
@@ -128,8 +126,9 @@ struct StudyGroupView: View {
 
 struct popularGroupView: View {
     var popular : [Group] = [
-        Group(groupName: "토익 990점 맞기",groupDetail: "토익 990점을 맞기위해 어쩌고 저쩌고 ㅇ너라나어리ㅏㅓ마니ㅓㅇ라ㅓㅁ나ㅣ어라ㅣㅓㅁ나어라ㅣㅓㄴ아ㅣㅓ린어" , groupPersonnel: "15/60",groupImage: "profile", currentStudy: "11", groupcolor: Color(red: 0.64, green: 0.46, blue: 0.93).opacity(0.87)),
-        Group(groupName: "토익 990점 맞기",groupDetail: "토익 990점을 맞기위해 어쩌고 저쩌고 ㅇ너라나어리ㅏㅓ마니ㅓㅇ라ㅓㅁ나ㅣ어라ㅣㅓㅁ나어라ㅣㅓㄴ아ㅣㅓ린어" , groupPersonnel: "15/60",groupImage: "profile", currentStudy: "11", groupcolor: Color(red: 0.45, green: 0.66, blue: 0.43).opacity(0.87))
+        Group(groupName: "토익 900점 뿌시기",groupDetail: "토익 900점을 목표로 하는 방입니다. 대학생, 취준생 모두 가능합니다. 열심히 하실분만 들어와주세요" , groupPersonnel: "37/60",groupImage: "english", currentStudy: "21", groupcolor: Color(red: 0.64, green: 0.46, blue: 0.93).opacity(0.87)),
+        
+        Group(groupName: "Swift 마스터",groupDetail: "취업난에서 살아남기! 네카라쿠배 뿌시자!!" , groupPersonnel: "13/30",groupImage: "apple", currentStudy: "9", groupcolor: Color(red: 0.45, green: 0.66, blue: 0.43).opacity(0.87))
     ]
     
     var body: some View {
@@ -147,12 +146,12 @@ struct popularGroupView: View {
                                         Spacer()
                                         Image(group.groupImage)
                                             .resizable()
-                                            .frame(width: 50,height: 50)
+                                            .frame(width: 30,height: 30)
                                             .clipped()
                                     }
                                     HStack{
                                         Text(group.groupDetail)
-                                            .frame(width: 190)
+                                            .frame(width: 200)
                                         Spacer()
                                     }
                                     .padding(.bottom,5)
@@ -174,7 +173,7 @@ struct popularGroupView: View {
                                                         Text("참여하기")
                                                             .padding(.all,6)
                                                             .background(Color.white)
-                                                            .foregroundColor(.indigo)
+                                                            .foregroundColor(Color.gray80)
                                                             .cornerRadius(10)
                                                     }
                                                 }
@@ -192,10 +191,7 @@ struct popularGroupView: View {
                             )
                             .cornerRadius(20)
                             
-                            
-                            
                         }
-                        
                         .cornerRadius(20)
                         .shadow(color: Color.gray20.opacity(0.3), radius: 6, x: 0, y: 3)
                         .padding(EdgeInsets(top: 10, leading: 20, bottom:0, trailing: 20))
