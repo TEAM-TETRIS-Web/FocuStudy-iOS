@@ -9,10 +9,10 @@ import SwiftUI
 
 struct TodoListView: View {
     @State private var multiSelection = Set<UUID>()
-
+    
     @State private var newTodo = ""
     @State private var todos = [String]()
-
+    
     func addList(){
         self.newTodo = ""
         print(newTodo)
@@ -25,7 +25,7 @@ struct TodoListView: View {
                 VStack{
                     HStack{
                         TextField("Text Todo", text: $newTodo, onCommit: addList)
-
+                        
                         Button(action: {
                             self.todos.append(self.newTodo)
                         }, label: {
@@ -50,7 +50,8 @@ struct TodoListView: View {
             }
             .navigationTitle("TodoList")
             .toolbar { EditButton() }
-        }
+        }.background(Color.systemGray)
+        
     }
     func removeRow(at offsets: IndexSet) {
         todos.remove(atOffsets: offsets)
