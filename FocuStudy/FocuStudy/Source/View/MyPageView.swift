@@ -7,211 +7,243 @@
 
 import SwiftUI
 
+enum timeInfo : String, CaseIterable {
+    case totalTime = "총 공부"
+    case maxTime = "최대 집중"
+    case startTime = "시작"
+    case endTime = "종료"
+}
+
+
 struct MyPageView: View {
+    
+    @State var selectedPicker: timeInfo = .totalTime
+    @Namespace var animation
+
     var body: some View {
         NavigationView{
-            ZStack{
-                //BackGroundView()
-                VStack{
+            VStack{
+                VStack(spacing:0){
                     HStack{
                         Text("09월 30일 (토)")
                             .font(.bold16)
-                            .padding()
+                            .padding(.horizontal,16)
+                            .padding(.top,16)
+                        
                         Spacer()
                     }
-                    .padding(.horizontal,20)
+                    
                     VStack(spacing:0){
                         Image("profile")
                             .resizable()
-                            .frame(width: 200)
+                            .frame(width: 60,height: 60)
                             .scaledToFit()
-                            .clipShape(Circle().inset(by: 20))
-                            .padding(.horizontal,70)
-                        
+                            .clipShape(Circle().inset(by: 5))
                         Text("StopYoon님")
                             .font(.bold16)
-                            .padding(.bottom,30)
+                            .padding(.bottom,10)
                     }
-                    HStack{
-                        HStack{
-                            VStack{
-                                Text("총 공부시간")
-                                    .font(.bold16)
-                                    .foregroundColor(.symbolBlue)
-                                
-                                Text("10:24:10")
-                                    .font(.bold16)
-                            }
-                            .padding(.all,6)
-                            .background(Color.white)
-                            .cornerRadius(12)
-                            
-                            VStack{
-                                Text("최대 집중 시간")
-                                    .font(.bold16)
-                                    .foregroundColor(.symbolBlue)
-                                
-                                Text("8:12:30")
-                                    .font(.bold16)
-                            }
-                            .padding(.all,6)
-                            .background(Color.white)
-                            .cornerRadius(12)
-                        }
-                        HStack{
-                            VStack{
-                                Text("시작시간")
-                                    .font(.bold16)
-                                    .foregroundColor(.symbolBlue)
-                                
-                                Text("07시 46분")
-                                    .font(.bold16)
-                            }
-                            .padding(.all,6)
-                            .background(Color.white)
-                            .cornerRadius(12)
-                            
-                            VStack{
-                                Text("종료시간")
-                                    .font(.bold16)
-                                    .foregroundColor(.symbolBlue)
-                                
-                                Text("21시 35분")
-                                    .font(.bold16)
-                            }
-                            .padding(.all,6)
-                            .background(Color.white)
-                            .cornerRadius(12)
-                        }
-                    }
-                    Spacer()
-                    
-                    VStack{
-                        HStack{
-                            coinView()
-                            coinView()
-                            coinView()
-                            coinView()
-                            coinView()
-                            coinView()
-                            coinView()
-                        }
-                        HStack{
-                            coinView()
-                            coinView()
-                            coinView()
-                            coinView()
-                            coinView()
-                            coinView()
-                            coinView()
-                        }
-                        HStack{
-                            coinView()
-                            coinView()
-                            coinView()
-                            coinView()
-                            coinView()
-                            coinView()
-                            coinView()
-                        }
-                        HStack{
-                            coinView()
-                            coinView()
-                            coinView()
-                            coinView()
-                            coinView()
-                            coinView()
-                            coinView()
-                        }
-                    }
-                    .background(Color.gray10)
-                    Spacer()
-                    
-                    VStack{
-                        HStack(spacing:0){
-                            Text("보유 코인 : ")
-                                .font(.bold16)
-                            Text("24")
-                                .font(.bold16)
-                                .foregroundColor(Color.symbolBlue)
-                            Text("개")
-                                .font(.bold16)
-                        }
-                        
-                    }
-                    Spacer()
                     
                 }
+                .background(Color.white)
+                .cornerRadius(20)
+                .padding(.horizontal,20)
                 
-                .navigationTitle("My Page")
-                .navigationBarItems(
-                    trailing:
-                        NavigationLink(
-                            destination: SettingView(),
-                            label: {
-                                Image(systemName: "slider.horizontal.3")
-                                
-                            })
-                )
-            }.background(Color.systemGray)
+                VStack{
+                    HStack{
+                        Text("Focus Time")
+                            .font(.bold16)
+                            .padding()
+                        
+                        Spacer()
+                    }
+                    animate()
+                    timeTabView(tabs: selectedPicker)
+                }
+                .background(Color.white)
+                .cornerRadius(20)
+                .padding(.horizontal,20)
+                
+                coinView()
+                Spacer()
+
+            }
+            .background(Color.systemGray)
+            .navigationTitle("My Page")
+            .navigationBarItems(
+                trailing:
+                    NavigationLink(
+                        destination: SettingView(),
+                        label: {
+                            Image(systemName: "slider.horizontal.3")
+                                .foregroundColor(Color.gray80)
+                        })
+            )
+            .navigationBarBackButtonHidden(true)
+        
+            
         }
+        .background(Color.systemGray)
+
     }
-}
-struct SettingView: View {
-    @State var nickName: String = ""
     
-    @Environment(\.presentationMode) var presentationMode
-    var body: some View {
-        
-        VStack{
-            Spacer()
-            Spacer()
-            HStack{
-                Text("닉네임 수정")
-                    .font(.bold16)
-                Spacer()
+    @ViewBuilder
+    private func animate() -> some View {
+        HStack {
+            ForEach(timeInfo.allCases, id: \.self) { item in
+                VStack {
+                    Text(item.rawValue)
+                        .font(.bold16)
+                        .frame(maxWidth: .infinity/4, minHeight: 30)
+                        .foregroundColor(selectedPicker == item ? .black : .gray)
+                    
+                    if selectedPicker == item {
+                        Capsule()
+                            .foregroundColor(.black)
+                            .frame(height: 3)
+                            .matchedGeometryEffect(id: "totalTime", in: animation)
+                    }
+                    
+                }
+                .onTapGesture {
+                    withAnimation(.easeInOut) {
+                        self.selectedPicker = item
+                    }
+                }
             }
-            TextField("Enter your nickName", text: $nickName)
-                .padding()
-                .background(Color(uiColor: .secondarySystemBackground))
-            
-            Spacer()
-            
-            HStack{
-                Spacer()
-                Text("완료")
-                    .font(.bold16)
-                    .foregroundColor(.white)
-                Spacer()
-            }
-            .padding(.vertical,10)
-            .background(Color.symbolBlue)
-            .cornerRadius(12)
-            
-            Spacer()
-            
-        }
-        .padding(.horizontal,20)
-        
-        
+        }.padding(.horizontal,10)
+
     }
 }
 
-struct coinView: View {
+struct timeTabView: View {
+    
+    var tabs : timeInfo
+    
     var body: some View {
         
+        switch tabs {
+        case .totalTime:
+            VStack{
+                Text("10:24:11")
+                    .font(.bold24)
+                    .padding(.vertical,15)
+            }
+        case .maxTime:
+            Text("10:24:12")
+                .font(.bold24)
+                .padding(.vertical,15)
+
+            
+        case .startTime:
+            Text("10:24:13")
+                .font(.bold24)
+                .padding(.vertical,15)
+
+        case .endTime:
+            Text("10:24:14")
+                .font(.bold24)
+                .padding(.vertical,15)
+
+        }
+        
+    }
+    
+    
+    
+}
+struct coinView: View {
+    var body: some View {
         VStack{
             
+            VStack{
+                HStack(spacing:0){
+                    Text("보유 코인 : ")
+                        .font(.bold16)
+                    Text("20")
+                        .font(.bold16)
+                        .foregroundColor(Color.symbolBlue)
+                    Text("개")
+                        .font(.bold16)
+                    
+                    Spacer()
+                }
+                .padding()
+            }
+            VStack{
+                HStack{
+                    existedCoinView()
+                    notExistedCoinView()
+                    existedCoinView()
+                    notExistedCoinView()
+                    existedCoinView()
+                    existedCoinView()
+                    existedCoinView()
+
+                }
+                HStack{
+                    existedCoinView()
+                    existedCoinView()
+                    notExistedCoinView()
+                    notExistedCoinView()
+                    existedCoinView()
+                    existedCoinView()
+                    existedCoinView()
+
+                }
+                HStack{
+                    existedCoinView()
+                    notExistedCoinView()
+                    existedCoinView()
+                    existedCoinView()
+                    existedCoinView()
+                    notExistedCoinView()
+                    existedCoinView()
+
+                }
+                HStack{
+                    notExistedCoinView()
+                    existedCoinView()
+                    notExistedCoinView()
+                    notExistedCoinView()
+                    existedCoinView()
+                    existedCoinView()
+                    existedCoinView()
+
+                }
+                HStack{
+                    notExistedCoinView()
+                    existedCoinView()
+                    Spacer()
+                }
+                .padding(.leading,48)
+                .padding(.bottom,16)
+                
+            }
+        }
+        .background(Color.white)
+        .cornerRadius(20)
+        .padding(.horizontal,20)
+        
+    }
+}
+struct existedCoinView: View {
+    var body: some View {
+        VStack{
             Image("coin")
                 .resizable()
                 .frame(width: 30, height: 30)
         }
-        .padding(.all,1)
-        .background(Color.white)
+        .background(Color.blue10)
         .cornerRadius(12)
     }
 }
 
-#Preview {
-    MyPageView()
+struct notExistedCoinView: View {
+    var body: some View {
+        Rectangle()
+            .frame(width: 30, height: 30)
+            .foregroundColor(Color.gray10)
+            .cornerRadius(12)
+    }
 }

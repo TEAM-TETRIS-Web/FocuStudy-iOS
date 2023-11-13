@@ -10,7 +10,7 @@ import Lottie
 
 struct HomeView: View {
     @State private var myGroup = 0
-    let myGroups = ["토익 990점 맞기", "백준 골드1 도전방", "전공시험 스터디 구합니다", "같이 코딩하실분"]
+    let myGroups = ["토익 990점 뿌시기", "백준 골드1 도전방", "전공시험 스터디 구합니다", "책벌레"]
     
     var body: some View {
         NavigationView{
@@ -19,11 +19,10 @@ struct HomeView: View {
                     Spacer()
                     VStack(spacing:3){
                         
-            
-
                         Text("11월 02일 (목)")
                             .font(.bold16)
                             .foregroundColor(.black)
+                            .padding(.bottom,40)
                         
                         
                         Text("Focus TIME")
@@ -39,9 +38,9 @@ struct HomeView: View {
                     .cornerRadius(18)
                     Spacer()
                 }.padding(.horizontal,10)
-                .background(Color.white)
-                .cornerRadius(8)
-                .padding(.horizontal,15)
+                    .background(Color.white)
+                    .cornerRadius(20)
+                    .padding(.horizontal,20)
                 
                 Spacer()
                 
@@ -53,7 +52,7 @@ struct HomeView: View {
                         }
                         
                         .padding(.horizontal,30)
-                        .padding(.vertical,20)
+                        .padding(.vertical,80)
                         .background(Color.white)
                         
                         .pickerStyle(.navigationLink)
@@ -61,9 +60,9 @@ struct HomeView: View {
                     Spacer()
                 }
                 .background(Color.white)
-                .cornerRadius(8)
-                .padding(.horizontal,15)
-
+                .cornerRadius(20)
+                .padding(.horizontal,20)
+                
                 Spacer()
                 
                 NavigationLink(
@@ -74,13 +73,14 @@ struct HomeView: View {
                             Text("공부 시작하기")
                                 .font(.bold16)
                                 .foregroundColor(.black)
-                                .padding(.vertical,10)
+                                .padding(.vertical,15)
                             Spacer()
                         }
                         .background(Color.white)
-                        .cornerRadius(8)
-                        .padding(.horizontal,15)
+                        .cornerRadius(20)
+                        .padding(.horizontal,20)
                     })
+                Spacer()
             }
             .navigationTitle("Home")
             .background(Color.systemGray)
@@ -93,95 +93,111 @@ struct HomeView: View {
 
 
 struct studyView: View {
-    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
+    public var backButton : some View {
+        Button{
+            self.presentationMode.wrappedValue.dismiss()
+        } label: {
+            HStack {
+                Image(systemName: "chevron.left")
+                    .aspectRatio(contentMode: .fit)
+                    .foregroundColor(Color.gray80)
+            }
+        }
+        
+    }
+    
+    struct Studying : Identifiable{
+        var id = UUID()
+        var studyName : String
+        var studyImage : String
+    }
+    
+    var studyPeople : [Studying] = [Studying(studyName: "정지윤", studyImage: "profile"),
+                                    Studying(studyName: "양민서", studyImage: "profile"),
+                                    Studying(studyName: "박상규", studyImage: "profile"),
+                                    Studying(studyName: "황기중", studyImage: "profile") ]
+    
+    
     
     var body: some View {
-        NavigationView{
-            VStack{
-                ScrollView(.horizontal){
-                    HStack{
-                        VStack{
-                            Image("profile")
-                            Text("정지윤")
-                                .font(.bold16)
-                                .foregroundColor(.symbolBlue)
-                            Text("02:10:46")
-                                .font(.bold24)
-                                .foregroundColor(.symbolBlue)
-                            
-                        }
-                        VStack{
-                            Image("profile")
-                            Text("박상규")
-                                .font(.bold16)
-                                .foregroundColor(.symbolBlue)
-                            Text("01:34:10")
-                                .font(.bold24)
-                                .foregroundColor(.symbolBlue)
-                        }
-                        VStack{
-                            Image("profile")
-                            Text("양민서")
-                                .font(.bold16)
-                                .foregroundColor(.symbolBlue)
-                            Text("03:51:32")
-                                .font(.bold24)
-                                .foregroundColor(.symbolBlue)
-                        }
-                        VStack{
-                            Image("profile")
-                            Text("황기중")
-                                .font(.bold16)
-                                .foregroundColor(.symbolBlue)
-                            Text("00:45:39")
-                                .font(.bold24)
-                                .foregroundColor(.symbolBlue)
-                        }
-                        
-                    }
-                    .padding()
-                }
-                Spacer()
-                
-                HStack{
-                    Image("profile")
-                    
-                    VStack(spacing:8){
-                        Text("Focus TIME")
-                            .font(.bold16)
-                            .foregroundColor(.symbolBlue)
-                        
-                        Text("02:10:35")
-                            .font(.bold24)
-                            .foregroundColor(.symbolBlue)
-                    }
-                }
-                .padding(.vertical,20)
-                .padding(.horizontal,30)
-                .background(Color.lightBlue)
-                .cornerRadius(18)
-                .padding(.bottom,30)
-                
-                HStack{
-                    Text("공부 그만하기")
-                        .font(.bold16)
-                        .foregroundColor(.white)
-                }
-                .padding(.horizontal,30)
-                .padding(.vertical,15)
-                .background(Color.symbolBlue)
-                .cornerRadius(20)
-                .onTapGesture {
-                    presentationMode.wrappedValue.dismiss()
-                    
-                }
-                
+        VStack{
+            HStack{
+                Text("토익 990점 뿌시기")
+                    .font(.bold24)
+                    .foregroundColor(Color.black)
                 Spacer()
             }
-            .navigationTitle("토익 990점 맞기")
+            .padding(.horizontal,20)
+            
+            ScrollView(.horizontal){
+                HStack(spacing : 15){
+                    ForEach(studyPeople) { study in
+                        VStack{
+                            Image(study.studyImage)
+                                .resizable()
+                                .frame(width: 115,height: 100)
+                                .clipped()
+                            
+                            Text(study.studyName)
+                                .font(.bold16)
+                                .foregroundColor(.black)
+                        }   .background(Color.white)
+                            .cornerRadius(20)
+                    }
+                }
+                .padding()
+            }
+            .padding(.horizontal,10)
+            
+            Spacer()
+            
+            HStack{
+                Image("profile")
+                
+                VStack(spacing:8){
+                    Text("Focus TIME")
+                        .font(.bold16)
+                        .foregroundColor(.black)
+                    
+                    Text("02:10:35")
+                        .font(.bold24)
+                        .foregroundColor(.symbolBlue)
+                }
+            }
+            .padding(.vertical,20)
+            .padding(.horizontal,30)
+            .background(Color.white)
+            .cornerRadius(18)
+            .padding(.bottom,30)
+            
+            HStack{
+                Spacer()
+                Text("공부 그만하기")
+                    .font(.bold16)
+                    .foregroundColor(Color.symbolBlue)
+                    .padding(.vertical,15)
+                Spacer()
+            }
+            .background(Color.white)
+            .cornerRadius(20)
+            .padding(.horizontal,30)
+            .onTapGesture {
+                presentationMode.wrappedValue.dismiss()
+                
+            }
+            
+            Spacer()
+            Spacer()
+            
         }
+        .background(Color.systemGray)
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: backButton)
     }
 }
+
 #Preview {
     HomeView()
 }
