@@ -51,7 +51,9 @@ struct SettingView: View {
             .padding(.vertical,10)
             .background(Color.white)
             .cornerRadius(12)
-            
+            .onTapGesture {
+                presentationMode.wrappedValue.dismiss()
+            }
             Spacer()
             
         }

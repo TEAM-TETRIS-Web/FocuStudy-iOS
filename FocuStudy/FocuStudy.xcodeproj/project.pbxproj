@@ -39,6 +39,8 @@
 		C27240C52AC09B590041A5D7 /* StudyGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27240C42AC09B590041A5D7 /* StudyGroupView.swift */; };
 		C27240C72AC09B6B0041A5D7 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27240C62AC09B6B0041A5D7 /* TodoListView.swift */; };
 		C294592A2AD7DEFD00CCCA37 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29459292AD7DEFD00CCCA37 /* HomeView.swift */; };
+		C2E1E2562B03B75C00B602EA /* StopWatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E1E2552B03B75C00B602EA /* StopWatchView.swift */; };
+		C2E1E2582B03BE0900B602EA /* StudyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E1E2572B03BE0900B602EA /* StudyView.swift */; };
 		C2F8CE962AF09E1400166558 /* BackGround.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F8CE952AF09E1400166558 /* BackGround.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +78,8 @@
 		C27240C42AC09B590041A5D7 /* StudyGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyGroupView.swift; sourceTree = "<group>"; };
 		C27240C62AC09B6B0041A5D7 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		C29459292AD7DEFD00CCCA37 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C2E1E2552B03B75C00B602EA /* StopWatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchView.swift; sourceTree = "<group>"; };
+		C2E1E2572B03BE0900B602EA /* StudyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyView.swift; sourceTree = "<group>"; };
 		C2F8CE952AF09E1400166558 /* BackGround.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGround.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,7 +120,9 @@
 			children = (
 				C27240BE2ABEE0270041A5D7 /* Launch Screen.storyboard */,
 				C29459292AD7DEFD00CCCA37 /* HomeView.swift */,
+				C2E1E2572B03BE0900B602EA /* StudyView.swift */,
 				C27240C42AC09B590041A5D7 /* StudyGroupView.swift */,
+				C2E1E2552B03B75C00B602EA /* StopWatchView.swift */,
 				C200C8B62B02345200B315CB /* RecentGroupView.swift */,
 				C200C8B42B02340E00B315CB /* PopularGroupView.swift */,
 				C27240C62AC09B6B0041A5D7 /* TodoListView.swift */,
@@ -288,6 +294,8 @@
 				C27240C32AC09A7E0041A5D7 /* MainTabbedView.swift in Sources */,
 				C200C8B92B0241CA00B315CB /* SettingView.swift in Sources */,
 				C294592A2AD7DEFD00CCCA37 /* HomeView.swift in Sources */,
+				C2E1E2562B03B75C00B602EA /* StopWatchView.swift in Sources */,
+				C2E1E2582B03BE0900B602EA /* StudyView.swift in Sources */,
 				C265BA5F2ACC2C23004242CA /* CommunityView.swift in Sources */,
 				C27240A82ABEDA6A0041A5D7 /* FontManger.swift in Sources */,
 				C27240BD2ABEDE750041A5D7 /* ColorManager.swift in Sources */,
