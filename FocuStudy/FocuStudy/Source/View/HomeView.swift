@@ -12,6 +12,8 @@ struct HomeView: View {
     @State private var myGroup = 0
     let myGroups = ["토익 990점 뿌시기", "백준 골드1 도전방", "전공시험 스터디 구합니다", "책벌레"]
     
+    @State static var myStudyTime = 9000
+    
     var body: some View {
         NavigationView{
             VStack{
@@ -29,12 +31,17 @@ struct HomeView: View {
                             .font(.semiBold)
                             .foregroundColor(.black)
                         
-                        Text("02:10:35")
+                        
+                        Text(convertSecondsToTime(timeInSeconds: HomeView.myStudyTime+5))
                             .font(.extraBold)
                             .foregroundColor(.black)
+                        
+                        
+                        
+                        
                     }
                     .padding(.vertical,60)
-                    .padding(.horizontal,80)
+                    .padding(.horizontal,60)
                     .cornerRadius(18)
                     Spacer()
                 }.padding(.horizontal,10)
@@ -66,7 +73,7 @@ struct HomeView: View {
                 Spacer()
                 
                 NavigationLink(
-                    destination: studyView(),
+                    destination: studyView(myStudyTime: HomeView.$myStudyTime),
                     label: {
                         HStack{
                             Spacer()
@@ -88,113 +95,11 @@ struct HomeView: View {
         }
         
     }
-}
-
-
-
-struct studyView: View {
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    
-    public var backButton : some View {
-        Button{
-            self.presentationMode.wrappedValue.dismiss()
-        } label: {
-            HStack {
-                Image(systemName: "chevron.left")
-                    .aspectRatio(contentMode: .fit)
-                    .foregroundColor(Color.gray80)
-            }
-        }
-        
-    }
-    
-    struct Studying : Identifiable{
-        var id = UUID()
-        var studyName : String
-        var studyImage : String
-    }
-    
-    var studyPeople : [Studying] = [Studying(studyName: "정지윤", studyImage: "profile"),
-                                    Studying(studyName: "양민서", studyImage: "profile"),
-                                    Studying(studyName: "박상규", studyImage: "profile"),
-                                    Studying(studyName: "황기중", studyImage: "profile") ]
-    
-    
-    
-    var body: some View {
-        VStack{
-            HStack{
-                Text("토익 990점 뿌시기")
-                    .font(.bold24)
-                    .foregroundColor(Color.black)
-                Spacer()
-            }
-            .padding(.horizontal,20)
-            
-            ScrollView(.horizontal){
-                HStack(spacing : 15){
-                    ForEach(studyPeople) { study in
-                        VStack{
-                            Image(study.studyImage)
-                                .resizable()
-                                .frame(width: 115,height: 100)
-                                .clipped()
-                            
-                            Text(study.studyName)
-                                .font(.bold16)
-                                .foregroundColor(.black)
-                        }   .background(Color.white)
-                            .cornerRadius(20)
-                    }
-                }
-                .padding()
-            }
-            .padding(.horizontal,10)
-            
-            Spacer()
-            
-            HStack{
-                Image("profile")
-                
-                VStack(spacing:8){
-                    Text("Focus TIME")
-                        .font(.bold16)
-                        .foregroundColor(.black)
-                    
-                    Text("02:10:35")
-                        .font(.bold24)
-                        .foregroundColor(.symbolBlue)
-                }
-            }
-            .padding(.vertical,20)
-            .padding(.horizontal,30)
-            .background(Color.white)
-            .cornerRadius(18)
-            .padding(.bottom,30)
-            
-            HStack{
-                Spacer()
-                Text("공부 그만하기")
-                    .font(.bold16)
-                    .foregroundColor(Color.symbolBlue)
-                    .padding(.vertical,15)
-                Spacer()
-            }
-            .background(Color.white)
-            .cornerRadius(20)
-            .padding(.horizontal,30)
-            .onTapGesture {
-                presentationMode.wrappedValue.dismiss()
-                
-            }
-            
-            Spacer()
-            Spacer()
-            
-        }
-        .background(Color.systemGray)
-        .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: backButton)
+    func convertSecondsToTime(timeInSeconds: Int) -> String {
+        let hours = timeInSeconds / 3600
+        let minutes = (timeInSeconds - hours*3600) / 60
+        let seconds = timeInSeconds % 60
+        return String(format: "%02i:%02i:%02i", hours,minutes,seconds)
     }
 }
 
