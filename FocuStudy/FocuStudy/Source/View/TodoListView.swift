@@ -24,12 +24,12 @@ struct TodoListView: View {
             VStack{
                 VStack{
                     HStack{
-                        TextField("Text Todo", text: $newTodo, onCommit: addList)
+                        TextField("Todo 입력", text: $newTodo, onCommit: addList)
                         
                         Button(action: {
                             self.todos.append(self.newTodo)
                         }, label: {
-                            Image(systemName: "pencil")
+                            Image("pencil")
                         })
                     }
                     .padding(.horizontal,20)
@@ -40,17 +40,35 @@ struct TodoListView: View {
                         .padding(.horizontal,20)
                 }
                 
-                List {
-                    ForEach(todos, id:\.self) {
-                        Text("\($0)")
+                List{
+                    ForEach(todos,id : \.self) { todo in
+                        VStack{
+                            HStack{
+                                Text(todo)
+                                    .font(.bold16)
+                                    .padding(.all,6)
+                            }
+                        }
+                        .background(Color.blue10)
+                        .cornerRadius(6)
+                        .padding(.all,3)
                     }
                     .onDelete(perform: removeRow)
                 }
-                .listStyle(.grouped)
-            }
+                Spacer()
+                
+                
+            }.background(Color.systemGray)
             .navigationTitle("TodoList")
-            .toolbar { EditButton() }
-        }.background(Color.systemGray)
+            .toolbar {
+                
+                EditButton()
+                    .foregroundColor(Color.gray80)
+                    .font(.bold16)
+                    .buttonStyle(.borderedProminent)
+                    .tint(.white)
+            }
+        }
         
     }
     func removeRow(at offsets: IndexSet) {
