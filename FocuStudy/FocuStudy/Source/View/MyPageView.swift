@@ -48,6 +48,7 @@ struct MyPageView: View {
                 .background(Color.white)
                 .cornerRadius(20)
                 .padding(.horizontal,20)
+                .padding(.bottom,5)
                 
                 VStack{
                     HStack{
@@ -63,7 +64,8 @@ struct MyPageView: View {
                 .background(Color.white)
                 .cornerRadius(20)
                 .padding(.horizontal,20)
-                
+                .padding(.bottom,5)
+
                 coinView()
                 Spacer()
 

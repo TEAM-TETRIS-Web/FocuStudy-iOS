@@ -25,6 +25,7 @@ struct TodoListView: View {
                 VStack{
                     HStack{
                         TextField("Todo 입력", text: $newTodo, onCommit: addList)
+                            .font(.bold16)
                         
                         Button(action: {
                             self.todos.append(self.newTodo)

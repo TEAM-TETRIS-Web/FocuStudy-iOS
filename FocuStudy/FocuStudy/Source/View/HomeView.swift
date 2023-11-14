@@ -18,14 +18,16 @@ struct HomeView: View {
         NavigationView{
             VStack{
                 HStack{
-                    Spacer()
                     VStack(spacing:3){
-                        
-                        Text("11월 02일 (목)")
-                            .font(.bold16)
-                            .foregroundColor(.black)
-                            .padding(.bottom,40)
-                        
+                        HStack{
+                            Text("11월 02일 (목)")
+                                .font(.bold16)
+                                .foregroundColor(.black)
+                                .padding(.bottom,20)
+                                .padding(.top,10)
+                            
+                            Spacer()
+                        }
                         
                         Text("Focus TIME")
                             .font(.semiBold)
@@ -36,41 +38,31 @@ struct HomeView: View {
                             .font(.extraBold)
                             .foregroundColor(.black)
                         
-                        
-                        
-                        
                     }
-                    .padding(.vertical,60)
-                    .padding(.horizontal,60)
+                    .padding(.bottom,40)
                     .cornerRadius(18)
-                    Spacer()
-                }.padding(.horizontal,10)
+                    
+                    
+                }.padding(.horizontal,15)
                     .background(Color.white)
                     .cornerRadius(20)
                     .padding(.horizontal,20)
                 
-                Spacer()
-                
-                HStack{
-                    Spacer()
-                    Picker("My Group", selection: $myGroup) {
-                        ForEach(myGroups, id:\.self) {
-                            Text("\($0)")
+                Form {
+                    Section {
+                        Picker(selection: $myGroup,
+                               label: Text("그룹 선택")
+                            .font(.bold16)
+                        ) {
+                            ForEach(0 ..< myGroups.count) {
+                                Text(self.myGroups[$0])
+                                    .font(.bold16)
+                            }
                         }
-                        
-                        .padding(.horizontal,30)
-                        .padding(.vertical,80)
-                        .background(Color.white)
-                        
                         .pickerStyle(.navigationLink)
                     }
-                    Spacer()
                 }
-                .background(Color.white)
-                .cornerRadius(20)
-                .padding(.horizontal,20)
                 
-                Spacer()
                 
                 NavigationLink(
                     destination: studyView(myStudyTime: HomeView.$myStudyTime),
@@ -79,7 +71,7 @@ struct HomeView: View {
                             Spacer()
                             Text("공부 시작하기")
                                 .font(.bold16)
-                                .foregroundColor(.black)
+                                .foregroundColor(.symbolBlue)
                                 .padding(.vertical,15)
                             Spacer()
                         }
@@ -87,11 +79,12 @@ struct HomeView: View {
                         .cornerRadius(20)
                         .padding(.horizontal,20)
                     })
-                Spacer()
+                .padding(.bottom,30)
+                
+                
             }
             .navigationTitle("Home")
             .background(Color.systemGray)
-            
         }
         
     }

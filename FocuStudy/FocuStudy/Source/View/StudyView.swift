@@ -100,21 +100,18 @@ struct studyView: View {
                 Spacer()
                 Text("공부 그만하기")
                     .font(.bold16)
-                    .foregroundColor(Color.symbolBlue)
+                    .foregroundColor(.symbolBlue)
                     .padding(.vertical,15)
                 Spacer()
             }
             .background(Color.white)
-            .cornerRadius(18)
-            .padding(.horizontal,30)
+            .cornerRadius(20)
+            .padding(.horizontal,20)
             .onTapGesture {
                 presentationMode.wrappedValue.dismiss()
                 
             }
-            
-            Spacer()
-            Spacer()
-            Spacer()
+            .padding(.bottom,30)
 
             
         }
